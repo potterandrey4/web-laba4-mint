@@ -1,0 +1,14 @@
+
+.header-info > h2 {
+  font-size: 150%;
+  font-style: italic;
+}
+
+header {
+  min-height: 15%;
+  min-width: 100%;
+  backdrop-filter: blur(20px) brightness(80%);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}

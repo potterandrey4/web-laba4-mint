@@ -1,0 +1,10 @@
+footer {
+  height: 140px;
+  background: url("../../../assets/img/i.webp") center center no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15%;
+  flex-direction: column;
+  filter: brightness(0.6) sepia(0.6);
+}

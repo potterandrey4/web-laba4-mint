@@ -1,0 +1,58 @@
+
+@font-face {
+  font-family: "awesome-font";
+  src: url("assets/fonts/BrahmsGotischCyr.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "awesome-font", serif;
+  color: #818184;
+  letter-spacing: 2px;
+}
+
+html, body, .wrapper{
+  background: url("assets/img/paintingShip.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+}
+
+
+.block {
+  margin-top: 100px;
+  backdrop-filter: blur(20px) brightness(50%);
+}
+#bottom-button {
+  background: url("assets/img/sunduk.png") center center no-repeat;
+  background-size: 100% 100%;
+  padding: 20px;
+  max-width: 100px;
+}
+
+.field {
+  margin: 10px;
+}
+
+input, button {
+  background-color: #1D1C1C;
+}
+
+
+section {
+  background-size: cover;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-block {
+/*  min-height: 100%;*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
