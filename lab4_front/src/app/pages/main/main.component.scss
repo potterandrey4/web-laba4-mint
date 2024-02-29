@@ -11,6 +11,7 @@
   font-size: 14px;
   border-collapse: collapse;
   text-align: center;
+  color: black !important;
 }
 
 .block {
@@ -27,6 +28,7 @@ th {
 
 td {
   background-color: grey;
+  color: black !important;
 }
 
 .radio-input {
@@ -62,7 +64,7 @@ input[type=radio]:checked {
 .input {
   min-width: 240px;
   max-width: 340px;
-  margin-top: 30px; 
+  margin-top: 30px;
   margin-bottom: 100px;
 }
 

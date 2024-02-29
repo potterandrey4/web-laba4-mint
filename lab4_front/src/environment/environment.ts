@@ -1,4 +1,4 @@
-export const backendURL: String = "http://localhost:8080/laba";
+export const backendURL: String = "http://127.0.0.1:20550/laba/api";
 
 export const yMin: number = -2;
 export const yMax: number = 2;
