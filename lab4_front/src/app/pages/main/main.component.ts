@@ -89,27 +89,30 @@ export class MainComponent implements AfterViewInit, OnInit {
 }
 
   drawFigures(r: number) {
+    const scaledR = r * 2;
     this.drawCircle(r);
-    this.context.fillRect(centerX, centerY, r, r * 0.5);
+    this.context.fillRect(centerX, centerY, scaledR, scaledR * 0.5);
     this.drawTriangle(r);
   }
 
   drawCircle(r: number) {
+    const scaledR = r * 2;
     this.context.fillStyle = "#8D8948";
     this.context.beginPath();
-    this.context.arc(centerX, centerY, r / 2, 0, Math.PI * 2);
+    this.context.arc(centerX, centerY, scaledR / 2, 0, Math.PI * 2);
     this.context.fill();
-    this.context.clearRect(centerX, centerY, -r, -r);
-    this.context.clearRect(centerX, centerY, r, r);
-    this.context.clearRect(centerX, centerY, r, -r);
+    this.context.clearRect(centerX, centerY, -scaledR, -scaledR);
+    this.context.clearRect(centerX, centerY, scaledR, scaledR);
+    this.context.clearRect(centerX, centerY, scaledR, -scaledR);
   }
 
   drawTriangle(r: number) {
+    const scaledR = r * 2;
     this.context.fillStyle = "#8D8948";
     this.context.beginPath();
     this.context.moveTo(centerX, centerY);
-    this.context.lineTo(centerX, centerY - r/2);
-    this.context.lineTo(centerX - r, centerY);
+    this.context.lineTo(centerX, centerY - scaledR / 2);
+    this.context.lineTo(centerX - scaledR, centerY);
     this.context.fill();
   }
 
@@ -122,9 +125,9 @@ drawAxis() {
     this.context.moveTo(graphLeft, centerY);
     this.context.lineTo(graphRight, centerY);
     this.context.stroke();
-    
+
     const xstep = (graphRight - graphLeft) / cellCount;
-    
+
     for (let i = 0; i <= cellCount; i++) {
         this.context.beginPath();
         this.context.moveTo(graphLeft + i * xstep, graphTop - padding);
@@ -181,6 +184,9 @@ drawAxis() {
     this.userService.logout()
   }
 
+  deleteShots(){
+    this.shotService.deleteShots()
+  }
   private showError(message: string) {
     this.messageService.add({
       severity: 'error',

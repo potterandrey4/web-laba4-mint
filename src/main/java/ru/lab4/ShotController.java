@@ -75,4 +75,15 @@ public class ShotController {
         );
     }
 
+
+   @DELETE
+   public List<ShotResponse> deleteAll(@Context HttpServletRequest req) {
+       String token = req.getHeader(HttpHeaders.AUTHORIZATION).substring(5).trim();
+       String usernameAndPassword = new String(Base64.getUrlDecoder().decode(token), StandardCharsets.UTF_8);
+       String username = usernameAndPassword.split(":")[0];
+       User user = userRepository.findByUsername(username);
+       shotRepository.findByUser(user).clear();
+       List<ShotResponse> shots = new ArrayList<>();
+       return shots;
+   }
 }

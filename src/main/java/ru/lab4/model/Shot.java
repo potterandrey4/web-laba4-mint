@@ -37,9 +37,16 @@ public class Shot {
     }
 
     private Boolean checkHit() {
-        boolean area1_hit = x <= 0 && y <= 0 && x >= -r && y >= -r / 2;
-        boolean area2_hit = x >= 0 && y <= 0 && y >= 0.5 * x - 0.5 * r;
-        boolean area3_hit = x >= 0 && y >= 0 && x * x + y * y <= (r / 2) * (r / 2);
+        boolean area1_hit = x <= 0 && y <= 0 && x*x + y*y <= r*r;
+        boolean area2_hit = x >= 0 && y <= 0 && y >= -r && x <= 2*r;
+        boolean area3_hit = x <= 0 && y >= 0 && y-x/2 <= r;
         return area1_hit || area2_hit || area3_hit;
     }
 }
+
+//    private Boolean checkHit() {
+//        boolean area1_hit = x <= 0 && y <= 0 && x*x + y*y <= r*r;
+//        boolean area2_hit = x >= 0 && y <= 0 && y >= -r/2 && x <= r;
+//        boolean area3_hit = x <= 0 && y >= 0 && y-x/2 <= r/2;
+//        return area1_hit || area2_hit || area3_hit;
+//    }

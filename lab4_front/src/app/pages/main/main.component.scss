@@ -1,3 +1,5 @@
+
+
 .results {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,8 @@
   min-height: 400px;
   width: 100%;
   text-align: center;
+  max-height: 100px;
+  overflow-y: auto;
 }
 
 .table-results {
@@ -104,3 +108,7 @@ input[type=radio]:checked {
   border: 1px solid;
 }
 
+#delete-button{
+  background-color: #1D1C1C;
+  margin-top: 10px;
+}
